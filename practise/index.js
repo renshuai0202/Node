@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // 正则匹配<style>和</style> <script>和</script>中间的内容
-// \s表示空白字符 \S表示非空白字符 *表示匹配任意次 \/表示转义符号/
+// \s表示空白字符 \S表示非空白字符 *表示匹配任意次,贪婪匹配 \/表示转义符号/ []表示匹配[]中的任意一个字符
 const regStyle = /<style>[\s\S]*<\/style>/;
 const regScript = /<script>[\s\S]*<\/script>/;
 
