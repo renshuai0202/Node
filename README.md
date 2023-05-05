@@ -14,3 +14,8 @@ resolve(path1, path2[, path3, ...])
 
 join(path1, path2[, path3, ...])
 将多个路径拼接起来
+
+basename(path[, 带点的文件后缀名])
+
+extname(path)
+文件后缀（包括点）
