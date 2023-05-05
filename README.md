@@ -43,3 +43,28 @@ server.on('request', (req, res) => {
 server.listen('80', () => {
   console.log('服务启动成功.');
 })
+
+## 模块化
+好处：可复用 可维护性 按需加载 防止污染全局变量
+
+内置模块 Nodejs自带 http fs path
+自定义模块 用户的js文件
+第三方模块
+
+`require()` 会执行被加载模块中的代码 
+加载自定义模块，可以省略 `.js` 后缀
+
+`module` 每个 `.js`文件都有 `module` 对象，包含模块的信息
+  Module {
+    path: '',
+    filename: '',
+    exports: {},
+    loaded: false,
+    ...
+  }
+
+module.exports.username = 'zhangsan';
+module.exports = {
+  username: 'lisi'
+}
+两种写法同时存在时，以module.exports = {}为准
