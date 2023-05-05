@@ -63,8 +63,10 @@ server.listen('80', () => {
     ...
   }
 
+语法：
 module.exports.username = 'zhangsan';
 module.exports = {
   username: 'lisi'
 }
-两种写法同时存在时，以module.exports = {}为准
+exports.username: 'wangwu'
+三种写法同时存在时，以module.exports = {}为准
